@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="navy_blue_color">#004899</color>
+    <color name="light_grey">#4D404040</color>
+    <color name="dark_grey1">#9a9a9a</color>
+    <color name="dark_grey2">#99000000</color>
+    <color name="message_text_color">#6691c2</color>
+    <color name="light_grey_background">#f2f2f2</color>
 </resources>

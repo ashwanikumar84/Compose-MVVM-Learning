@@ -12,13 +12,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ashwani.composesample.model.Message
 import com.ashwani.composesample.model.SampleData
-import com.ashwani.composesample.ui.Conversation
+import com.ashwani.composesample.navigation.AppNavigation
+import com.ashwani.composesample.ui.ConversationScreen
 import com.ashwani.composesample.ui.MessageCard
 import com.ashwani.composesample.ui.theme.ComposeSampleTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             ComposeSampleTheme(darkTheme = false) {
                 // A surface container using the 'background' color from the theme
@@ -26,8 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Conversation(SampleData.conversationSample)
-//                    MessageCard(Message("Android", "Jetpack Compose"))
+                    AppNavigation()
                 }
             }
         }

@@ -1,1 +1,23 @@
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.gradle
+/.idea/
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/workspace.xml
+/.idea/modules.xml
+/.idea/libraries
+/.idea/caches
 /build
+/captures
+/local.properties
+.DS_Store
+.gradle/checksums/md5-checksums.bin
+.gradle/checksums/sha1-checksums.bin
+.externalNativeBuild
+local.properties
+*.lock
+*/build/
+*~
+*.swp
