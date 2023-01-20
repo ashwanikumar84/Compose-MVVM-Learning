@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ComposeSample</string>
+    <string name="title">Compose Learning</string>
+    <string name="subtitle">Learn Compose</string>
+    <string name="confirm">Confirm</string>
+    <string name="conversation">Conversation</string>
+    <string name="back">Back</string>
+    <string name="message">Hey, take a look at Jetpack Compose, it\'s great!</string>
 </resources>

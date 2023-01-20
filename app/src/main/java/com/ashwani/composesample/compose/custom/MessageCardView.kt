@@ -1,6 +1,5 @@
 package com.ashwani.composesample.ui
 
-import android.util.Log
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
@@ -24,17 +23,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.ashwani.composesample.R
 import com.ashwani.composesample.model.Message
-import java.util.logging.Logger
 
 @Composable
 fun MessageCard(msg: Message) {
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
-            painter = painterResource(R.drawable.image1),
+            painter = painterResource(R.drawable.ic_profile_placeholder),
             contentDescription = "Contact profile picture",
             modifier = Modifier
                 // Set image size to 40 dp
@@ -52,13 +51,12 @@ fun MessageCard(msg: Message) {
 
         // surfaceColor will be updated gradually from one color to the other
         val surfaceColor by animateColorAsState(
-            if (isExpanded) MaterialTheme.colors.primary else MaterialTheme.colors.surface,
+            if (isExpanded) colorResource(id = R.color.light_grey_background) else MaterialTheme.colors.surface,
         )
 
         // We toggle the isExpanded variable when we click on this Column
         Column(modifier = Modifier.clickable {
             isExpanded = !isExpanded
-            Log.e("Card Expanded State","isExpanded = ${isExpanded}")
         }) {
             Text(
                 text = msg.author,
@@ -71,7 +69,7 @@ fun MessageCard(msg: Message) {
 
             Surface(
                 shape = MaterialTheme.shapes.medium,
-                elevation = 1.dp,
+                elevation = 0.dp,
                 // surfaceColor color will be changing gradually from primary to surface
                 color = surfaceColor,
                 // animateContentSize will change the Surface size gradually
